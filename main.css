@@ -1,0 +1,12 @@
+body {
+  padding-top: 60px;
+}
+
+#booklist {
+  margin-top: 10px
+}
+
+.book-image img {
+  height: 60px;
+  width: auto;
+}
