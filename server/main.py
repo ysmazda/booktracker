@@ -3,33 +3,15 @@ import logging
 import model
 import os
 import webapp2
-from google.appengine.ext import ndb
 from google.appengine.api import users
+from google.appengine.ext import ndb
 from webapp2_extras.appengine.users import login_required
 
-
-VIEW_STYLE = """<style>
-td, th {
-  border: dotted 1px black;
-}
-
-img {
-  height: 100px;
-}
-</style>
-"""
-
-TR_TEMPLATE = """<tr>
-  <td><img src="$imageurl"></td>
-  <td><a href="$url">$title</a></td>
-  <td>$status</td>
-</tr>
-"""
 
 class BooklistView(webapp2.RequestHandler):
   @login_required
   def get(self):
-    content = file(os.path.join(os.path.dirname(__file__),
+    content = file(os.path.join(os.path.dirname(__file__), '..', 'client',
                                 'main.html')).read()
     self.response.headers['Content-Type'] = 'text/html'
     self.response.out.write(content)

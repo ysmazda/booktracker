@@ -20,4 +20,4 @@ handlers:
   static_dir: bootstrap
 
 - url: /.*
-  script: main.app
+  script: server.main.app
