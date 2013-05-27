@@ -1,12 +1,9 @@
-body {
-  padding-top: 60px;
-}
-
 #booklist {
-  margin-top: 10px
+  margin: 70px auto 0;
+  width: 94%;
 }
 
 .book-image img {
-  height: 60px;
+  height: 80px;
   width: auto;
 }
