@@ -1,0 +1,24 @@
+<div>
+  <table id="booklist" class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th class="book-image">Image</th>
+        <th class="book-title">Title</th>
+        <th class="book-tag">Tag</th>
+        <th class="book-status">Status</th>
+      </tr>
+    </thead>
+    <tbody id="booklist-table-body">
+      <tr ng-repeat="book in books">
+        <td class="book-image">
+          <a href="{{book.url}}"><img src="{{book.imageurl}}"></a>
+        </td>
+        <td class="book-title">
+          <a href="/edit/{{book.key}}">{{book.title}}</a>
+        </td>
+        <td class="book-tag">{{book.tag}}</td>
+        <td class="book-status">{{book.status}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

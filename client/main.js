@@ -8,6 +8,7 @@ angular.module('bookServices', ['ngResource']).
 angular.module('booktracker', ['bookServices']).
   config(['$routeProvider', function($routeProvider) {
   $routeProvider.
+      when('/', {templateUrl: 'list.html', controller: BooktrackerCtrl}).
       otherwise({redirectTo: '/'});
 }]);
 

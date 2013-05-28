@@ -19,5 +19,13 @@ handlers:
 - url: /bootstrap
   static_dir: bootstrap
 
+- url: /
+  static_files: client/main.html
+  upload: client/main\.html
+
+- url: /list.html
+  static_files: client/list.html
+  upload: client/list\.html
+
 - url: /.*
   script: server.main.app
