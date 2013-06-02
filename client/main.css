@@ -1,9 +1,22 @@
-#booklist {
-  margin: 70px auto 0;
-  width: 94%;
-}
-
 .book-image img {
   height: 80px;
   width: auto;
+}
+
+.book-list {
+  margin: 10px 40px;
+  width: 94%;
+}
+
+.button-area {
+  margin-top: 50px;
+  margin-left: 60px;
+}
+
+.content-view {
+  margin-top: 40px;
+}
+
+.legend-add-book {
+  margin-left: 20px;
 }

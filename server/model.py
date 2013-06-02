@@ -5,7 +5,7 @@ from google.appengine.api import users
 
 class Book(ndb.Model):
   owner = ndb.UserProperty()
-  timestamp = ndb.DateTimeProperty(required=True)
+  timestamp = ndb.DateTimeProperty(required=True, auto_now_add=True)
   title = ndb.StringProperty(required=True)
   url = ndb.TextProperty(required=True)
   tag = ndb.StringProperty(repeated=True)

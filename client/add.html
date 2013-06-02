@@ -1,0 +1,56 @@
+<div class="div-new-book">
+  <legend class="legend-add-book">Add a new book</legend>
+  <form class="form-horizontal">
+    <div class="control-group">
+      <label class="control-label" for="input-title">Title</label>
+      <div class="controls">
+        <input ng-model="title" type="text" id="input-title"
+            class="input-xxlarge" placeholder="Title">
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="input-url">URL</label>
+      <div class="controls">
+        <input ng-model="url" type="url" id="input-url" class="input-xxlarge"
+            placeholder="URL">
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="input-imageurl">Image URL</label>
+      <div class="controls">
+        <input ng-model="imageurl" type="url" id="input-imageurl"
+            class="input-xxlarge" placeholder="Image URL">
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="input-url">Tag</label>
+      <div class="controls">
+        <input ng-model="tag" type="text" id="input-tag" class="input-xxlarge"
+            placeholder="tag1,tag2,tag3">
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="input-url">Status</label>
+      <div class="controls">
+        <select ng-model="status" id="input-status">
+          <option value="Wish">Wish</option>
+          <option value="Own">Own</option>
+          <option value="Read">Read</option>
+        </select>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="input-comment">Comment</label>
+      <div class="controls">
+        <input ng-model="comment" type="text" id="input-comment"
+            class="input-xxlarge" placeholder="Comment">
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="controls">
+        <a id="button-submit-book" class="btn" ng-click="submit()">Submit</a>
+        <a id="button-cancel-book" class="btn" href="#/">Cancel</a>
+      </div>
+    </div>
+  </form>
+</div>

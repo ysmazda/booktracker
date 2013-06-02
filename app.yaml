@@ -27,5 +27,9 @@ handlers:
   static_files: client/list.html
   upload: client/list\.html
 
+- url: /add.html
+  static_files: client/add.html
+  upload: client/add\.html
+
 - url: /.*
   script: server.main.app
