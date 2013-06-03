@@ -1,8 +1,6 @@
 angular.module('bookServices', ['ngResource']).
     factory('Book', function($resource) {
-   return $resource('books/:bookId', {}, {
-     get: {method: 'GET', isArray: true},
-   });
+   return $resource('books/:bookId');
 });
 
 angular.module('booktracker', ['bookServices']).
