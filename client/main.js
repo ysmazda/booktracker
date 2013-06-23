@@ -20,12 +20,19 @@ function setIfDefined(src, key, dst) {
     dst[key] = src[key];
 }
 
-function AddCtrl($scope, Book) {
+function AddCtrl($scope, Book, $routeParams, $location) {
   this.scope_ = $scope;
-  $scope.status = 'Wish';
+  this.location_ = $location;
+  $scope['status'] = 'Wish';
   this.bookResource_ = Book;
   $scope.submit = this.submit.bind(this);
-  console.log(this.routeParams_);
+  setIfDefined($routeParams, 'title', $scope);
+  setIfDefined($routeParams, 'url', $scope);
+  if ('tag' in $routeParams)
+    $scope['tag'] = $routeParams['tag'].split(';');
+  setIfDefined($routeParams, 'status', $scope);
+  setIfDefined($routeParams, 'imageurl', $scope);
+  setIfDefined($routeParams, 'comment', $scope);
 }
 
 AddCtrl.prototype.createBook = function() {
@@ -42,5 +49,5 @@ AddCtrl.prototype.submit = function() {
   setIfDefined(this.scope_, 'imageurl', book);
   setIfDefined(this.scope_, 'comment', book);
   book.$save();
-  window.location.href = '/';
+  this.location_.path('/');
 }

@@ -13,7 +13,7 @@ class BookHandler(webapp2.RequestHandler):
     data = json.loads(self.request.body)
     book = model.Book(title = data.get('title'),
                       url = data.get('url'),
-                      tag = data.get('tag'),
+                      tag = data.get('tag', []),
                       status = data.get('status'),
                       imageurl = data.get('imageurl'))
     comment = data.get('comment')
